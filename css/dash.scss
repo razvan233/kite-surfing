@@ -1,0 +1,266 @@
+@import "global";
+header {
+    width: 90%;
+    margin: auto;
+    min-height: 10vh;
+    nav {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        .logo {
+            flex: 2 1;
+            width: 100%;
+            height: 100%;
+            padding: 0 2.5rem;
+            display: flex;
+            justify-content: flex-start;
+            img {
+                width: auto;
+                height: 10vh;
+                object-fit: cover;
+            }
+        }
+        .profile {
+            flex: 1 1;
+            height: 10vh;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            .logout {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    width: auto;
+                    height: 10vh;
+                    object-fit: cover;
+                    cursor: pointer;
+                    position: relative;
+                }
+                .logoutBtn {
+                    width: 100%;
+                    border: 1px solid black;
+                    background-color: white;
+                    padding: 1rem 5rem;
+                    cursor: pointer;
+                    transition: all 1s ease-in-out;
+                    &:hover {
+                        background-color: cadetblue;
+                    }
+                }
+                &.toggle {
+                    z-index: 1000;
+                }
+            }
+        }
+    }
+}
+
+.map {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    min-height: 60vh;
+    .myMap {
+        min-height: 40vh;
+        width: 100%;
+    }
+    .filter {
+        position: absolute;
+        width: 88%;
+        height: 40vh;
+        margin: auto;
+        display: flex;
+        justify-content: right;
+        .filter-filter {
+            z-index: 500;
+            .insideFilter {
+                border-radius: 1.5rem;
+                height: 5.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 5rem;
+                background: white;
+                border: 1px solid black;
+                cursor: pointer;
+                width: 18rem;
+                img {
+                    flex: 1 1;
+                    width: 1rem;
+                    height: 100%;
+                    object-fit: cover;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                p {
+                    flex: 2 1;
+                    font-size: 2rem;
+                    user-select: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .filterPopUp {
+                display: none;
+            }
+        }
+        &.filter-toggle {
+            display: flex;
+            .filterPopUp {
+                position: absolute;
+                width: 18rem;
+                display: flex;
+                flex-direction: column;
+                margin-top: 10rem;
+                background: white;
+                border: 1px solid black;
+                border-top: 0;
+                display: flex;
+                align-items: center;
+                border-radius: 0 0 1.5rem 1.5rem;
+                .xRight {
+                    width: 100%;
+                    display: flex;
+                    justify-content: right;
+                    #x {
+                        position: absolute;
+                        margin-top: -4.5rem;
+                        padding: 0 1rem;
+                        background-color: transparent;
+                        border: 0;
+                        cursor: pointer;
+                    }
+                }
+                #countryFilter {
+                    position: absolute;
+                    width: 80%;
+                    margin-top: -2.5rem;
+                    text-align: center;
+                    border-radius: 1rem;
+                    border: 1px solid black;
+                    outline: none;
+                    transition: all 0.5s ease-in-out;
+                    &:focus {
+                        border: 0;
+                        border-radius: 0;
+                        border-bottom: 1px solid black;
+                    }
+                }
+                #windFilter {
+                    text-align: center;
+                    border-radius: 1rem;
+                    border: 1px solid black;
+                    outline: none;
+                    transition: all 0.5s ease-in-out;
+                    &:focus {
+                        border: 0;
+                        border-radius: 0;
+                        border-bottom: 1px solid black;
+                    }
+                }
+                #applyFilter {
+                    background-color: white;
+                    border: 1px solid black;
+                    padding: 0.5rem 4rem;
+                    margin: 1.5rem 0 1rem 0;
+                    cursor: pointer;
+                    transition: all 0.5s ease-in-out;
+                    &:hover {
+                        border-radius: 2rem;
+                        background-color: cadetblue;
+                    }
+                }
+            }
+            .insideFilter {
+                height: 5.2rem;
+                border-radius: 1.5rem 1.5rem 0 0;
+                border-bottom: 0;
+                cursor: default;
+                img,
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.tableApi {
+    height: 30vh;
+    width: 90%;
+    margin: auto;
+    overflow: scroll;
+    overflow: auto;
+    table {
+        width: 100%;
+        margin-top: 2.5rem;
+        tr {
+            margin: 1rem;
+            &:hover {
+                background-color: red;
+                cursor: pointer;
+            }
+        }
+    }
+    th {
+        background-color: #4287f5;
+        color: white;
+    }
+    th,
+    td {
+        font-size: 1.8rem;
+        width: 15rem;
+        text-align: center;
+        border: 0.1rem solid black;
+        padding: 1rem;
+    }
+}
+
+.popUp {
+    .star {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        margin-left: 0.5rem;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    p {
+        font-size: 2rem;
+    }
+    .titlePop {
+        font-size: 2.5rem;
+    }
+    .insidePop {
+        font-size: 1.3rem;
+        &.title {
+            font-weight: bold;
+        }
+    }
+    .popUpButton {
+        width: 100%;
+        background-color: gold;
+        border: 0;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 2rem;
+        transition: border 0.8s ease-in-out;
+        border: 1px solid white;
+        &:hover {
+            border: 1px solid black;
+            background-color: rgb(255, 228, 72);
+        }
+        &.toggle {
+            background-color: RED;
+        }
+    }
+}
