@@ -1,0 +1,28 @@
+country: "Equatorial Guinea"
+​​
+createdAt: "2019-11-24T17:27:18.072Z"
+​​
+id: "24"
+​​
+lat: "4.1542"
+​​
+long: "59.8930"
+​​
+month: "November"
+​​
+name: "Heidenreich, Shanahan and Macejkovic"
+​​
+probability: 16
+
+
+
+
+avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/d_nny_m_cher/128.jpg"
+​​
+createdAt: "2019-11-25T07:05:30.954Z"
+​​
+email: "Laurel.Keeling24@hotmail.com"
+​​
+id: "11"
+​​
+name: "Kimberly Stroman"

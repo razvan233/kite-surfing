@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kite Surfing</title>
+    <link rel="shortcut icon" href="assets/kitesurfing-icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="home" id="home">
+        <header class="home-header">
+            <nav>
+                <div class="logo">
+                    <img src="assets/kitesurfing.svg" alt="logo" />
+                </div>
+                <div class="header-bar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#login">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section class="home-main">
+            <h1>Kite Surfing, your dream. Our pleasure!</h1>
+            <button type="submit" onClick="document.getElementById('login').scrollIntoView();">
+          Go to Login
+        </button>
+            <p>
+                You don't have an account?
+                <span><a href="#login">Sign In now!</a> </span>
+            </p>
+        </section>
+    </div>
+    <div class="gallery" id="gallery">
+        <img src="assets/pexels-alexandre-saraiva-carniato-2723678.jpg" alt="kiteSurf1" class="kite1" />
+        <img src="assets/pexels-apg-graphics-1599921.jpg" alt="kiteSurf2" class="kite2" />
+        <img src="assets/pexels-edgar-almeida-7419637.jpg" alt="kiteSurf3" class="kite3" />
+
+        <img src="assets/kite-surfer-1719493_1920.jpg" alt="kiteSurf5" class="kite5" />
+    </div>
+    <div class="login" id="login">
+        <form>
+            <label for="email">Email: </label>
+            <input type="email" id="email" placeholder="Email" required />
+            <label for="password">Password: </label>
+            <input type="password" id="password" placeholder="Password" required />
+            <button type="button" onclick="Login();">Login</button>
+        </form>
+    </div>
+    <footer>
+        <div class="logo"></div>
+        <div class="media"></div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

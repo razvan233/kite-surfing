@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <link rel="shortcut icon" href="assets/kitesurfing-icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/dash.css" />
+    <title>Kite Surfing-Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/kitesurfing.svg" alt="logo image" />
+            </div>
+            <div class="profile">
+                <div class="logout">
+                    <img src="assets/profile-user.svg" alt="profile image" id="avatar" onclick="LogoutPopUp(); " />
+
+                    <button type="button " class="logoutBtn" onclick="Logout();">
+              Logout
+            </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="map">
+        <div id="myMap" class="myMap"></div>
+        <div class="filter">
+            <div class="filter-filter">
+                <div class="filterPopUp">
+                    <div class="xRight">
+                        <button class="toggleON" id="x" onclick="filterDown();">X</button>
+                    </div>
+                    <input class="toggleON" id="countryFilter" type="text" autocomplete="off" placeholder="Country " />
+                    <input class="toggleON" id="windFilter" type="text" autocomplete="off" placeholder="Wind Probability " />
+                    <button class="toggleON" id="applyFilter" onclick="uploadTable();">
+              Apply
+            </button>
+                </div>
+                <div class="insideFilter" onclick="filterUp();">
+                    <img src="assets/filter.png" alt="filter-icon " />
+                    <p>FILTER</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tableApi">
+        <table id="api">
+            <tbody>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Country</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Probability</th>
+                    <th>Month</th>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script src=" js/dash.js"></script>
+</body>
+
+</html>
