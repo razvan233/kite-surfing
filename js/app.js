@@ -32,11 +32,11 @@ function Login() {
                 break;
 
             } else {
-                
+
                 i++;
             }
     
         }
-alert('User not found');
+
     });
 }
